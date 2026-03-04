@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Orders</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .order-card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+      .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+      }
+      .order-id {
+        font-weight: bold;
+        color: #007bff;
+      }
+      .order-status {
+        padding: 5px 15px;
+        border-radius: 20px;
+        background: #28a745;
+        color: white;
+        font-size: 14px;
+      }
+      .order-items {
+        margin: 15px 0;
+      }
+      .order-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .customer-details {
+        background: #f0f0f0;
+        padding: 10px;
+        border-radius: 4px;
+        margin: 10px 0;
+      }
+      .order-total {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 10px;
+        color: #28a745;
+      }
+      .empty-message {
+        text-align: center;
+        padding: 60px 20px;
+        color: #666;
+      }
+      .nav-links {
+        margin-bottom: 20px;
+      }
+      .nav-links a {
+        margin-right: 15px;
+        color: #007bff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>My Orders</h2>
+      <div class="nav-links">
+        <a href="index.html">Continue Shopping</a>
+        <a href="cart.html">View Cart</a>
+      </div>
+
+      <div id="orders"></div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="orders.js"></script>
+  </body>
+</html>

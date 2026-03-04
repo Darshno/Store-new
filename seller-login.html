@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Seller Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #f5f5f5;
+      }
+      .login-container {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      h2 {
+        margin-top: 0;
+        text-align: center;
+      }
+      input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 12px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      .secondary-btn {
+        background: #6c757d;
+      }
+      .secondary-btn:hover {
+        background: #5a6268;
+      }
+      #msg {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .success {
+        color: green;
+      }
+      .links {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .links a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .toggle-text {
+        text-align: center;
+        margin-top: 15px;
+        color: #666;
+      }
+      .toggle-text a {
+        color: #007bff;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      #nameField {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2 id="formTitle">Seller Login</h2>
+
+      <div id="nameField">
+        <input type="text" id="name" placeholder="Full Name" />
+      </div>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      
+      <button id="submitBtn" onclick="sellerLogin()">Login</button>
+
+      <p id="msg"></p>
+
+      <div class="toggle-text">
+        <span id="toggleText">Don't have an account? <a onclick="toggleMode()">Sign up</a></span>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Back to Store</a>
+      </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="seller-login.js"></script>
+  </body>
+</html>

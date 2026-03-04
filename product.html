@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Product Details</title>
+  </head>
+  <body>
+    <div id="product-details"></div>
+
+    <script>
+      const API_URL = "http://localhost:5000/api";
+
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      async function loadProduct() {
+        const res = await fetch(`http://localhost:5000/api/products/${id}`);
+
+        if (!res.ok) {
+          throw new Error("Failed to load product");
+        }
+
+        const product = await res.json();
+
+        document.getElementById("product-details").innerHTML = `
+                    <div class="product">
+                        <img src="${product.image}" alt="">
+                        <h2>${product.name}</h2>
+                        <p><strong>Price:</strong> ₹${product.price}</p>
+                        <p>${product.description}</p>
+                        <button onclick="goBack()">Back</button>
+                    </div>
+                `;
+      }
+
+      function goBack() {
+        window.location.href = "/";
+      }
+
+      loadProduct();
+    </script>
+  </body>
+</html>

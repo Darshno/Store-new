@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Seller Dashboard</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      button {
+        cursor: pointer;
+        padding: 8px 16px;
+        margin: 5px;
+      }
+      input, textarea {
+        width: 100%;
+        max-width: 400px;
+        padding: 8px;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Seller Dashboard</h2>
+      <div>
+        <span id="sellerName"></span>
+        <button onclick="window.location.href='admin-orders.html'">View All Orders</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <h3>Upload Product</h3>
+
+    <input id="name" placeholder="Product Name" /><br />
+    <input id="price" type="number" placeholder="Price" /><br />
+    <textarea id="description" placeholder="Description"></textarea><br />
+    <input id="image" placeholder="Image URL" /><br />
+    <input id="type" placeholder="Type" /><br />
+
+    <button onclick="uploadProduct()">Upload</button>
+
+    <hr />
+
+    <h2>Your Products</h2>
+    <div id="productList"></div>
+
+    <script src="config.js"></script>
+    <script src="seller.js"></script>
+  </body>
+</html>

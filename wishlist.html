@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Wishlist</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .wishlist-item {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px 0;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .wishlist-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+      .item-details {
+        flex: 1;
+      }
+      .item-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      button {
+        padding: 8px 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+      }
+      .btn-cart {
+        background: #28a745;
+        color: white;
+      }
+      .btn-remove {
+        background: #dc3545;
+        color: white;
+      }
+      .empty-message {
+        text-align: center;
+        padding: 40px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My Wishlist</h2>
+    <a href="index.html">Continue Shopping</a> | 
+    <a href="cart.html">View Cart</a>
+
+    <div id="wishlist"></div>
+
+    <script src="wishlist.js"></script>
+  </body>
+</html>
